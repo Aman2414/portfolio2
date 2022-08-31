@@ -37,6 +37,12 @@ app.post("/contact", (req, res) => {
 
 app.use(express.static("website"));
 
+app.get("/resume", (req, res) => {
+
+  //will send pdf here
+  res.sendFile(__dirname + "/website/resume/bg-image.jpg");
+});
+
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/website/index.html");
 });
